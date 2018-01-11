@@ -10,20 +10,27 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { FeedPageModule } from '../pages/feed/feed.module';
+
 import { IntroPageModule } from '../pages/intro/intro.module';
 
 import { HttpClientModule } from '@angular/common/http'
 import { MovieProvider } from '../providers/movie/movie';
+import { PipesModule } from '../pipes/pipes.module';
+import { ConfigProvider } from '../providers/config/config';
+import { FeedPageModule } from '../pages/feed/feed.module';
+
 
 
 @NgModule({
+  //sempre que criar pagina esta dentro declarations
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
     TabsPage
+   
+    
     
   ],
   imports: [
@@ -32,21 +39,28 @@ import { MovieProvider } from '../providers/movie/movie';
     FeedPageModule,
     IntroPageModule,
     HttpClientModule
+    
+    
+    
   ],
   bootstrap: [IonicApp],
+  //sempre que criar pagina esta dentro entryComponents
   entryComponents: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
     TabsPage
+    
+    
    
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    MovieProvider
+    ConfigProvider,
+    MovieProvider,
   ]
 })
 export class AppModule {}
