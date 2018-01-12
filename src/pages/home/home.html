@@ -7,6 +7,9 @@
 <ion-content padding>
   <h2 align="center">Welcome Expiress</h2>
   
-  
+  <img *ngIf="img" [src]="img" alt="">
+
+  <button ion-button block (click)="tirarFoto()">tirar foto</button>
+
 </ion-content>
 

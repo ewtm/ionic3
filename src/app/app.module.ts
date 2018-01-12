@@ -18,6 +18,10 @@ import { MovieProvider } from '../providers/movie/movie';
 import { PipesModule } from '../pipes/pipes.module';
 import { ConfigProvider } from '../providers/config/config';
 import { FeedPageModule } from '../pages/feed/feed.module';
+import { ConfiguracoesPageModule } from '../pages/configuracoes/configuracoes.module';
+import { SobrePageModule } from '../pages/sobre/sobre.module';
+import { PerfilPageModule } from '../pages/perfil/perfil.module';
+import { FilmeDetalhesPageModule } from '../pages/filme-detalhes/filme-detalhes.module';
 
 
 
@@ -38,7 +42,11 @@ import { FeedPageModule } from '../pages/feed/feed.module';
     IonicModule.forRoot(MyApp),
     FeedPageModule,
     IntroPageModule,
-    HttpClientModule
+    HttpClientModule,
+    ConfiguracoesPageModule,
+    SobrePageModule,
+    PerfilPageModule,
+    FilmeDetalhesPageModule,
     
     
     
