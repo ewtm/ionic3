@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-let config_key_name ="config";
+let config_key_name = "config";
 
 @Injectable()
 export class ConfigProvider {
@@ -23,24 +23,26 @@ export class ConfigProvider {
   }
 
   //Grava
-  setConfigData(showSlide: boolean, name: string, username: string) {
+  setConfigData(showSlide?: boolean, name?: string, username?: string) {
+  //setConfigData(showSlide: boolean) {
     let config = {
       showSlide: false,
       name: "",
       username: ""
     };
 
-    if(showSlide){
+    if (showSlide) {
       config.showSlide = showSlide;
     }
-    if(name){
+    if (name) {
       config.name = name;
     }
-    if(username){
+  
+    if (username) {
       config.username = username;
     }
 
-    localStorage.setItem(config_key_name,JSON.stringify(config))
+    localStorage.setItem(config_key_name, JSON.stringify(config))
 
   }
 
